@@ -7,6 +7,9 @@ import fs from 'fs'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
+// Vercel fix: In serverless, files are often at the root
+const STORAGE_DIR = process.env.VERCEL ? path.join(process.cwd(), 'storage', 'routines') : path.join(__dirname, 'storage', 'routines')
+
 const app = express()
 const PORT = 3001
 
@@ -65,7 +68,7 @@ app.get('/api/routines/db', requireAuth, (req, res) => {
         res.setHeader('Pragma', 'no-cache')
         res.setHeader('Expires', '0')
 
-        const dbPath = path.join(__dirname, 'storage', 'routines', 'routine_db.json')
+        const dbPath = path.join(STORAGE_DIR, 'routine_db.json')
         const data = fs.readFileSync(dbPath, 'utf8')
         const routines = JSON.parse(data)
 
@@ -109,7 +112,7 @@ app.get('/api/view/:type/:encryptedPath', (req, res) => {
         }
 
         // Construct full file path
-        const fullPath = path.join(__dirname, 'storage', 'routines', filePath)
+        const fullPath = path.join(STORAGE_DIR, filePath)
 
         // Check if file exists
         if (!fs.existsSync(fullPath)) {
@@ -118,7 +121,7 @@ app.get('/api/view/:type/:encryptedPath', (req, res) => {
 
         // Security check: ensure file is within storage directory
         const resolvedPath = path.resolve(fullPath)
-        const storageDir = path.resolve(path.join(__dirname, 'storage', 'routines'))
+        const storageDir = path.resolve(STORAGE_DIR)
 
         if (!resolvedPath.startsWith(storageDir)) {
             return res.status(403).json({ error: 'Access denied' })
@@ -164,7 +167,7 @@ app.get('/api/download/:type/:encryptedPath', requireAuth, (req, res) => {
         }
 
         // Construct full file path
-        const fullPath = path.join(__dirname, 'storage', 'routines', filePath)
+        const fullPath = path.join(STORAGE_DIR, filePath)
 
         // Check if file exists
         if (!fs.existsSync(fullPath)) {
@@ -173,7 +176,7 @@ app.get('/api/download/:type/:encryptedPath', requireAuth, (req, res) => {
 
         // Security check: ensure file is within storage directory
         const resolvedPath = path.resolve(fullPath)
-        const storageDir = path.resolve(path.join(__dirname, 'storage', 'routines'))
+        const storageDir = path.resolve(STORAGE_DIR)
 
         if (!resolvedPath.startsWith(storageDir)) {
             return res.status(403).json({ error: 'Access denied' })
@@ -209,7 +212,7 @@ app.get('/api/health', (req, res) => {
 if (process.env.NODE_ENV !== 'production') {
     app.listen(PORT, () => {
         console.log(`🚀 Backend server running on http://localhost:${PORT}`)
-        console.log(`📁 Serving files from: ${path.join(__dirname, 'storage', 'routines')}`)
+        console.log(`📁 Serving files from: ${STORAGE_DIR}`)
     })
 }
 
