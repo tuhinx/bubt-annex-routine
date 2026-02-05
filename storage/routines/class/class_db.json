@@ -18758,6 +18758,1369 @@
     ]
   },
   {
+    "program": "B.Sc. in Civil Engineering (Evening)",
+    "intake": "5",
+    "section": "1",
+    "image": "routine_images/12_B_Sc__in_Civil_Engg_Evening_p1.png",
+    "pdf": "routine_pages/12_B_Sc__in_Civil_Engg_Evening_p1.pdf",
+    "tables": [
+      [
+        [
+          "Day/Time",
+          "08:00 AM to\n09:15 AM",
+          "09:15 AM to\n10:30 AM",
+          "10:30 AM to\n11:45 AM",
+          "11:45 AM to\n01:00 PM",
+          "03:15 PM to\n04:30 PM",
+          "04:30 PM to\n05:45 PM",
+          "05:45 PM to\n07:00 PM",
+          "07:00 PM to\n08:15 PM",
+          "08:15 PM to\n09:30 PM"
+        ],
+        [
+          "Fri",
+          "CE 445\nFC: AFT\nR: 1411",
+          "CE 445\nFC: AFT\nR: 1411",
+          "CE 443\nFC: MDSN\nR: 1411",
+          "CE 443\nFC: MDSN\nR: 1411",
+          "CE 477\nFC: MBZ\nR: 1411",
+          "CE 477\nFC: MBZ\nR: 1411",
+          "CE 442\nFC: AFT\nR: 2620",
+          "CE 442\nFC: AFT\nR: 2620",
+          "CE 475\nFC: SUSM\nR: 1411"
+        ],
+        [
+          "Sat",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "CE 474\nFC: AHJ\nR: 3904",
+          "CE 474\nFC: AHJ\nR: 3904",
+          "CE 475\nFC: SUSM\nR: 3904"
+        ]
+      ],
+      [
+        [
+          "Course\nCode",
+          "Course Tile",
+          "Faculty Code\n(FC)",
+          "Faculty Name"
+        ],
+        [
+          "CE 443",
+          "Introduction of Steel-Concrete Composite Structures",
+          "MDSN",
+          "Md.\nSalahuddin"
+        ],
+        [
+          "CE 474",
+          "Transportation Engineering Sessional II : Pavement Design and Traffic\nStudies",
+          "AHJ",
+          "Ahmed Jarif"
+        ],
+        [
+          "CE 477",
+          "Transportation Engineering V : Urban Transportation Planning and\nManagement",
+          "MBZ",
+          "Mahdi Bin\nZahid"
+        ]
+      ]
+    ]
+  },
+  {
+    "program": "B.Sc. in Civil Engineering (Evening)",
+    "intake": "6",
+    "section": "1",
+    "image": "routine_images/12_B_Sc__in_Civil_Engg_Evening_p2.png",
+    "pdf": "routine_pages/12_B_Sc__in_Civil_Engg_Evening_p2.pdf",
+    "tables": [
+      [
+        [
+          "Day/Time",
+          "08:00 AM to\n09:15 AM",
+          "09:15 AM to\n10:30 AM",
+          "10:30 AM to\n11:45 AM",
+          "11:45 AM to\n01:00 PM",
+          "03:15 PM to\n04:30 PM",
+          "04:30 PM to\n05:45 PM",
+          "05:45 PM to\n07:00 PM",
+          "07:00 PM to\n08:15 PM"
+        ],
+        [
+          "Thu",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "CE 424\nFC: KBO\nR: 1403",
+          "CE 424\nFC: KBO\nR: 1403"
+        ],
+        [
+          "Fri",
+          "CE 421\nFC: NSH\nR: 1403",
+          "CE 421\nFC: NSH\nR: 1403",
+          "CE 417\nFC: RNR\nR: 1403",
+          "CE 417\nFC: RNR\nR: 1403",
+          "WRE 423\nFC: MWA\nR: 1403",
+          "WRE 423\nFC: MWA\nR: 1403",
+          "CE 412\nFC: MISH\nR: 3907",
+          "CE 412\nFC: MISH\nR: 3907"
+        ]
+      ],
+      [
+        [
+          "Course\nCode",
+          "Course Tile",
+          "Faculty Code\n(FC)",
+          "Faculty Name"
+        ],
+        [
+          "CE 412",
+          "Transportation Engineering Sessional I : Highway Materials and Traffic\nEngineering Design",
+          "MISH",
+          "Md. Ismail\nHossain"
+        ],
+        [
+          "CE 417",
+          "Transportation Engineering II: Pavement Design and Railway\nEngineering",
+          "RNR",
+          "Ragib Noor"
+        ],
+        [
+          "WRE 423",
+          "Hydrology, Irrigation and Flood Management",
+          "MWA",
+          "Most. Wahida\nAsna"
+        ]
+      ]
+    ]
+  },
+  {
+    "program": "B.Sc. in Civil Engineering (Evening)",
+    "intake": "6",
+    "section": "2",
+    "image": "routine_images/12_B_Sc__in_Civil_Engg_Evening_p3.png",
+    "pdf": "routine_pages/12_B_Sc__in_Civil_Engg_Evening_p3.pdf",
+    "tables": [
+      [
+        [
+          "Day/Time",
+          "08:00 AM to\n09:15 AM",
+          "09:15 AM to\n10:30 AM",
+          "10:30 AM to\n11:45 AM",
+          "11:45 AM to\n01:00 PM",
+          "03:15 PM to\n04:30 PM",
+          "04:30 PM to\n05:45 PM",
+          "05:45 PM to\n07:00 PM",
+          "07:00 PM to\n08:15 PM"
+        ],
+        [
+          "Thu",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "CE 412\nFC: TII\nR: 3907",
+          "CE 412\nFC: TII\nR: 3907"
+        ],
+        [
+          "Fri",
+          "WRE 423\nFC: MWA\nR: 1409",
+          "WRE 423\nFC: MWA\nR: 1409",
+          "CE 424\nFC: MDTH\nR: 1409",
+          "CE 424\nFC: MDTH\nR: 1409",
+          "CE 417\nFC: RNR\nR: 1409",
+          "CE 417\nFC: RNR\nR: 1409",
+          "CE 421\nFC: NSH\nR: 1409",
+          "CE 421\nFC: NSH\nR: 1409"
+        ]
+      ],
+      [
+        [
+          "Course\nCode",
+          "Course Tile",
+          "Faculty Code\n(FC)",
+          "Faculty Name"
+        ],
+        [
+          "CE 412",
+          "Transportation Engineering Sessional I : Highway Materials and Traffic\nEngineering Design",
+          "TII",
+          "Tinvi Islam Tisha"
+        ],
+        [
+          "CE 417",
+          "Transportation Engineering II: Pavement Design and Railway\nEngineering",
+          "RNR",
+          "Ragib Noor"
+        ],
+        [
+          "CE 424",
+          "Concrete Structure Design Sessional II",
+          "MDTH",
+          "Md. Tanzil\nHawlader"
+        ],
+        [
+          "WRE 423",
+          "Hydrology, Irrigation and Flood Management",
+          "MWA",
+          "Most. Wahida\nAsna"
+        ]
+      ]
+    ]
+  },
+  {
+    "program": "B.Sc. in Civil Engineering (Evening)",
+    "intake": "7",
+    "section": "1",
+    "image": "routine_images/12_B_Sc__in_Civil_Engg_Evening_p4.png",
+    "pdf": "routine_pages/12_B_Sc__in_Civil_Engg_Evening_p4.pdf",
+    "tables": [
+      [
+        [
+          "Day/Time",
+          "08:00 AM to\n09:15 AM",
+          "09:15 AM to\n10:30 AM",
+          "10:30 AM to\n11:45 AM",
+          "11:45 AM to\n01:00 PM",
+          "03:15 PM to\n04:30 PM",
+          "04:30 PM to\n05:45 PM",
+          "05:45 PM to\n07:00 PM",
+          "07:00 PM to\n08:15 PM"
+        ],
+        [
+          "Thu",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "CE 3282\nFC: NSH\nR: 3906",
+          "CE 3282\nFC: NSH\nR: 3906"
+        ],
+        [
+          "Fri",
+          "CE 3263\nFC: AHJ\nR: 1404",
+          "CE 3263\nFC: AHJ\nR: 1404",
+          "CE 3251\nFC: MNAH\nR: 1404",
+          "CE 3251\nFC: MNAH\nR: 1404",
+          "CE 3271\nFC: MAHR\nR: 1404",
+          "CE 3271\nFC: MAHR\nR: 1404",
+          "CE 3232\nFC: SUSM\nR: 1404",
+          "CE 3232\nFC: SUSM\nR: 1404"
+        ]
+      ],
+      [
+        [
+          "Course\nCode",
+          "Course Tile",
+          "Faculty Code\n(FC)",
+          "Faculty Name"
+        ],
+        [
+          "CE 3263",
+          "Transportation Engineering II : Pavement Design and Railway\nEngineering",
+          "AHJ",
+          "Ahmed Jarif"
+        ],
+        [
+          "CE 3271",
+          "Environmental Engineering II",
+          "MAHR",
+          "Mahmudur\nRahman"
+        ]
+      ]
+    ]
+  },
+  {
+    "program": "B.Sc. in Civil Engineering (Evening)",
+    "intake": "7",
+    "section": "1",
+    "image": "routine_images/12_B_Sc__in_Civil_Engg_Evening_p5.png",
+    "pdf": "routine_pages/12_B_Sc__in_Civil_Engg_Evening_p5.pdf",
+    "tables": [
+      [
+        [
+          "Day/Time",
+          "05:45 PM to 07:00 PM",
+          "07:00 PM to 08:15 PM"
+        ],
+        [
+          "Thu",
+          "CE 3282\nFC: MJI\nR: 3806",
+          "CE 3282\nFC: MJI\nR: 3806"
+        ]
+      ],
+      [
+        [
+          "Course Code",
+          "Course Tile",
+          "Faculty Code (FC)",
+          "Faculty Name"
+        ],
+        [
+          "CE 3282",
+          "Open Channel Flow Sessional",
+          "MJI",
+          "Md. Jobayer Islam"
+        ]
+      ]
+    ]
+  },
+  {
+    "program": "B.Sc. in Civil Engineering (Evening)",
+    "intake": "7",
+    "section": "2",
+    "image": "routine_images/12_B_Sc__in_Civil_Engg_Evening_p6.png",
+    "pdf": "routine_pages/12_B_Sc__in_Civil_Engg_Evening_p6.pdf",
+    "tables": [
+      [
+        [
+          "Day/Time",
+          "08:00 AM to\n09:15 AM",
+          "09:15 AM to\n10:30 AM",
+          "10:30 AM to\n11:45 AM",
+          "11:45 AM to\n01:00 PM",
+          "03:15 PM to\n04:30 PM",
+          "04:30 PM to\n05:45 PM",
+          "05:45 PM to\n07:00 PM",
+          "07:00 PM to\n08:15 PM"
+        ],
+        [
+          "Thu",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "CE 3251\nFC: SUSM\nR: 1404",
+          "CE 3251\nFC: SUSM\nR: 1404"
+        ],
+        [
+          "Fri",
+          "CE 3282\nFC: MJI\nR: 3806",
+          "CE 3282\nFC: MJI\nR: 3806",
+          "CE 3271\nFC: MAHR\nR: 1405",
+          "CE 3271\nFC: MAHR\nR: 1405",
+          "CE 3232\nFC: AFT\nR: 1405",
+          "CE 3232\nFC: AFT\nR: 1405",
+          "CE 3263\nFC: AHJ\nR: 1405",
+          "CE 3263\nFC: AHJ\nR: 1405"
+        ]
+      ],
+      [
+        [
+          "Course\nCode",
+          "Course Tile",
+          "Faculty Code\n(FC)",
+          "Faculty Name"
+        ],
+        [
+          "CE 3263",
+          "Transportation Engineering II : Pavement Design and Railway\nEngineering",
+          "AHJ",
+          "Ahmed Jarif"
+        ],
+        [
+          "CE 3271",
+          "Environmental Engineering II",
+          "MAHR",
+          "Mahmudur\nRahman"
+        ],
+        [
+          "CE 3282",
+          "Open Channel Flow Sessional",
+          "MJI",
+          "Md. Jobayer Islam"
+        ]
+      ]
+    ]
+  },
+  {
+    "program": "B.Sc. in Civil Engineering (Evening)",
+    "intake": "7",
+    "section": "2",
+    "image": "routine_images/12_B_Sc__in_Civil_Engg_Evening_p7.png",
+    "pdf": "routine_pages/12_B_Sc__in_Civil_Engg_Evening_p7.pdf",
+    "tables": [
+      [
+        [
+          "Day/Time",
+          "08:00 AM to 09:15 AM",
+          "09:15 AM to 10:30 AM"
+        ],
+        [
+          "Fri",
+          "CE 3282\nFC: FAAA\nR: 3801",
+          "CE 3282\nFC: FAAA\nR: 3801"
+        ]
+      ],
+      [
+        [
+          "Course Code",
+          "Course Tile",
+          "Faculty Code (FC)",
+          "Faculty Name"
+        ],
+        [
+          "CE 3282",
+          "Open Channel Flow Sessional",
+          "FAAA",
+          "Fawziyah Afrin Aumi"
+        ]
+      ]
+    ]
+  },
+  {
+    "program": "B.Sc. in Civil Engineering (Evening)",
+    "intake": "8",
+    "section": "1",
+    "image": "routine_images/12_B_Sc__in_Civil_Engg_Evening_p8.png",
+    "pdf": "routine_pages/12_B_Sc__in_Civil_Engg_Evening_p8.pdf",
+    "tables": [
+      [
+        [
+          "Day/Time",
+          "08:00 AM to\n09:15 AM",
+          "09:15 AM to\n10:30 AM",
+          "10:30 AM to\n11:45 AM",
+          "11:45 AM to\n01:00 PM",
+          "03:15 PM to\n04:30 PM",
+          "04:30 PM to\n05:45 PM",
+          "05:45 PM to\n07:00 PM",
+          "07:00 PM to\n08:15 PM"
+        ],
+        [
+          "Thu",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "CE 3131\nFC: RNR\nR: 3904",
+          "CE 3131\nFC: RNR\nR: 3904"
+        ],
+        [
+          "Fri",
+          "CE 3152\nFC: MSRR\nR: 3807",
+          "CE 3152\nFC: MSRR\nR: 3807",
+          "CE 3282\nFC: NSH\nR: 3801",
+          "CE 3282\nFC: NSH\nR: 3801",
+          "CE 3161\nFC: MDZH\nR: 3904",
+          "CE 3161\nFC: MDZH\nR: 3904",
+          "CE 3181\nFC: FAAA\nR: 3904",
+          "CE 3181\nFC: FAAA\nR: 3904"
+        ]
+      ],
+      [
+        [
+          "Course\nCode",
+          "Course Tile",
+          "Faculty Code\n(FC)",
+          "Faculty Name"
+        ],
+        [
+          "CE 3131",
+          "Design of Reinforced Concrete Structures II",
+          "RNR",
+          "Ragib Noor"
+        ],
+        [
+          "CE 3152",
+          "Geotechnical Engineering Lab",
+          "MSRR",
+          "Md. Saifur Rahman\nRuman"
+        ],
+        [
+          "CE 3161",
+          "Transportation Engineering I : Transportation Planning and\nTraffic Engineering",
+          "MDZH",
+          "Md. Zahed Hossain"
+        ],
+        [
+          "CE 3181",
+          "Open Channel Flow",
+          "FAAA",
+          "Fawziyah Afrin Aumi"
+        ]
+      ]
+    ]
+  },
+  {
+    "program": "B.Sc. in Civil Engineering (Evening)",
+    "intake": "8",
+    "section": "1",
+    "image": "routine_images/12_B_Sc__in_Civil_Engg_Evening_p9.png",
+    "pdf": "routine_pages/12_B_Sc__in_Civil_Engg_Evening_p9.pdf",
+    "tables": [
+      [
+        [
+          "Day/Time",
+          "08:00 AM to 09:15 AM",
+          "09:15 AM to 10:30 AM",
+          "10:30 AM to 11:45 AM",
+          "11:45 AM to 01:00 PM"
+        ],
+        [
+          "Fri",
+          "CE 3152\nFC: JUI\nR: 3906",
+          "CE 3152\nFC: JUI\nR: 3906",
+          "CE 3282\nFC: MWA\nR: 3806",
+          "CE 3282\nFC: MWA\nR: 3806"
+        ]
+      ],
+      [
+        [
+          "Course Code",
+          "Course Tile",
+          "Faculty Code (FC)",
+          "Faculty Name"
+        ],
+        [
+          "CE 3152",
+          "Geotechnical Engineering Lab",
+          "JUI",
+          "Junaid Ul Islam"
+        ],
+        [
+          "CE 3282",
+          "Open Channel Flow Sessional",
+          "MWA",
+          "Most. Wahida Asna"
+        ]
+      ]
+    ]
+  },
+  {
+    "program": "B.Sc. in Civil Engineering (Evening)",
+    "intake": "8",
+    "section": "2",
+    "image": "routine_images/12_B_Sc__in_Civil_Engg_Evening_p10.png",
+    "pdf": "routine_pages/12_B_Sc__in_Civil_Engg_Evening_p10.pdf",
+    "tables": [
+      [
+        [
+          "Day/Time",
+          "08:00 AM to\n09:15 AM",
+          "09:15 AM to\n10:30 AM",
+          "10:30 AM to\n11:45 AM",
+          "11:45 AM to\n01:00 PM",
+          "03:15 PM to\n04:30 PM",
+          "04:30 PM to\n05:45 PM",
+          "05:45 PM to\n07:00 PM",
+          "07:00 PM to\n08:15 PM"
+        ],
+        [
+          "Fri",
+          "CE 3161\nFC: MDZH\nR: 1405",
+          "CE 3161\nFC: MDZH\nR: 1405",
+          "CE 3152\nFC: MSRR\nR: 3807",
+          "CE 3152\nFC: MSRR\nR: 3807",
+          "CE 3181\nFC: FAAA\nR: 1107",
+          "CE 3181\nFC: FAAA\nR: 1107",
+          "CE 3131\nFC: RNR\nR: 1403",
+          "CE 3131\nFC: RNR\nR: 1403"
+        ],
+        [
+          "Sat",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "CE 3282\nFC: MSAQ\nR: 3806",
+          "CE 3282\nFC: MSAQ\nR: 3806"
+        ]
+      ],
+      [
+        [
+          "Course\nCode",
+          "Course Tile",
+          "Faculty Code\n(FC)",
+          "Faculty Name"
+        ],
+        [
+          "CE 3131",
+          "Design of Reinforced Concrete Structures II",
+          "RNR",
+          "Ragib Noor"
+        ],
+        [
+          "CE 3152",
+          "Geotechnical Engineering Lab",
+          "MSRR",
+          "Md. Saifur Rahman\nRuman"
+        ],
+        [
+          "CE 3161",
+          "Transportation Engineering I : Transportation Planning and\nTraffic Engineering",
+          "MDZH",
+          "Md. Zahed Hossain"
+        ],
+        [
+          "CE 3181",
+          "Open Channel Flow",
+          "FAAA",
+          "Fawziyah Afrin Aumi"
+        ],
+        [
+          "CE 3282",
+          "Open Channel Flow Sessional",
+          "MSAQ",
+          "Md. Saowad Al Qavi"
+        ]
+      ]
+    ]
+  },
+  {
+    "program": "B.Sc. in Civil Engineering (Evening)",
+    "intake": "9",
+    "section": "1",
+    "image": "routine_images/12_B_Sc__in_Civil_Engg_Evening_p11.png",
+    "pdf": "routine_pages/12_B_Sc__in_Civil_Engg_Evening_p11.pdf",
+    "tables": [
+      [
+        [
+          "Day/Time",
+          "08:00 AM to\n09:15 AM",
+          "09:15 AM to\n10:30 AM",
+          "10:30 AM to\n11:45 AM",
+          "11:45 AM to\n01:00 PM",
+          "03:15 PM to\n04:30 PM",
+          "04:30 PM to\n05:45 PM",
+          "05:45 PM to\n07:00 PM",
+          "07:00 PM to\n08:15 PM"
+        ],
+        [
+          "Thu",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "CE 2212\nFC: MDSN\nR: 1107",
+          "CE 2212\nFC: MDSN\nR: 1107"
+        ],
+        [
+          "Fri",
+          "CE 2251\nFC: MBZ\nR: 3904",
+          "CE 2251\nFC: MBZ\nR: 3904",
+          "MTH 2201\nFC: JUI\nR: 3904",
+          "MTH 2201\nFC: JUI\nR: 3904",
+          "CE 2214\nFC: SUSM\nR: 3801",
+          "CE 2214\nFC: SUSM\nR: 3801",
+          "CE 3152\nFC: MAHR\nR: 3807",
+          "CE 3152\nFC: MAHR\nR: 3807"
+        ],
+        [
+          "Sat",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "CE 2233\nFC: KBO\nR: 3804",
+          "CE 2233\nFC: KBO\nR: 3804"
+        ]
+      ],
+      [
+        [
+          "Course Code",
+          "Course Tile",
+          "Faculty Code (FC)",
+          "Faculty Name"
+        ],
+        [
+          "CE 2212",
+          "Structural Mechanics Sessional",
+          "MDSN",
+          "Md. Salahuddin"
+        ],
+        [
+          "CE 2251",
+          "Principles of Soil Mechanics",
+          "MBZ",
+          "Mahdi Bin Zahid"
+        ],
+        [
+          "CE 3152",
+          "Geotechnical Engineering Lab",
+          "MAHR",
+          "Mahmudur Rahman"
+        ],
+        [
+          "MTH 2201",
+          "Applied Mathematics for Engineers",
+          "JUI",
+          "Junaid Ul Islam"
+        ]
+      ]
+    ]
+  },
+  {
+    "program": "B.Sc. in Civil Engineering (Evening)",
+    "intake": "9",
+    "section": "1",
+    "image": "routine_images/12_B_Sc__in_Civil_Engg_Evening_p12.png",
+    "pdf": "routine_pages/12_B_Sc__in_Civil_Engg_Evening_p12.pdf",
+    "tables": [
+      [
+        [
+          "Day/Time",
+          "03:15 PM to 04:30 PM",
+          "04:30 PM to 05:45 PM",
+          "05:45 PM to 07:00 PM",
+          "07:00 PM to 08:15 PM"
+        ],
+        [
+          "Thu",
+          "",
+          "",
+          "CE 3152\nFC: MAHR\nR: 3807",
+          "CE 3152\nFC: MAHR\nR: 3807"
+        ],
+        [
+          "Fri",
+          "CE 2214\nFC: TII\nR: 3806",
+          "CE 2214\nFC: TII\nR: 3806",
+          "CE 2212\nFC: KBO\nR: 1107",
+          "CE 2212\nFC: KBO\nR: 1107"
+        ]
+      ],
+      [
+        [
+          "Course Code",
+          "Course Tile",
+          "Faculty Code (FC)",
+          "Faculty Name"
+        ],
+        [
+          "CE 2214",
+          "Fluid Mechnics Sessional",
+          "TII",
+          "Tinvi Islam Tisha"
+        ],
+        [
+          "CE 3152",
+          "Geotechnical Engineering Lab",
+          "MAHR",
+          "Mahmudur Rahman"
+        ]
+      ]
+    ]
+  },
+  {
+    "program": "B.Sc. in Civil Engineering (Evening)",
+    "intake": "9",
+    "section": "2",
+    "image": "routine_images/12_B_Sc__in_Civil_Engg_Evening_p13.png",
+    "pdf": "routine_pages/12_B_Sc__in_Civil_Engg_Evening_p13.pdf",
+    "tables": [
+      [
+        [
+          "Day/Time",
+          "08:00 AM to\n09:15 AM",
+          "09:15 AM to\n10:30 AM",
+          "10:30 AM to\n11:45 AM",
+          "11:45 AM to\n01:00 PM",
+          "03:15 PM to\n04:30 PM",
+          "04:30 PM to\n05:45 PM",
+          "05:45 PM to\n07:00 PM",
+          "07:00 PM to\n08:15 PM",
+          "08:15 PM to\n09:30 PM"
+        ],
+        [
+          "Thu",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "CE 2233\nFC: MSRR\nR: 1411",
+          "MTH 2201\nFC: JUI\nR: 1411",
+          "MTH 2201\nFC: JUI\nR: 1411"
+        ],
+        [
+          "Fri",
+          "CE 2212\nFC: MDSN\nR: 1107",
+          "CE 2212\nFC: MDSN\nR: 1107",
+          "CE 2251\nFC: MBZ\nR: 1107",
+          "CE 2251\nFC: MBZ\nR: 1107",
+          "CE 3152\nFC: JUI\nR: 3807",
+          "CE 3152\nFC: JUI\nR: 3807",
+          "CE 2233\nFC: MSRR\nR: 3806",
+          "CE 2214\nFC: TII\nR: 3806",
+          "CE 2214\nFC: TII\nR: 3806"
+        ]
+      ],
+      [
+        [
+          "Course Code",
+          "Course Tile",
+          "Faculty Code (FC)",
+          "Faculty Name"
+        ],
+        [
+          "CE 2212",
+          "Structural Mechanics Sessional",
+          "MDSN",
+          "Md. Salahuddin"
+        ],
+        [
+          "CE 2214",
+          "Fluid Mechnics Sessional",
+          "TII",
+          "Tinvi Islam Tisha"
+        ],
+        [
+          "CE 2233",
+          "Structural Analysis and Design I",
+          "MSRR",
+          "Md. Saifur Rahman Ruman"
+        ],
+        [
+          "CE 2251",
+          "Principles of Soil Mechanics",
+          "MBZ",
+          "Mahdi Bin Zahid"
+        ],
+        [
+          "CE 3152",
+          "Geotechnical Engineering Lab",
+          "JUI",
+          "Junaid Ul Islam"
+        ],
+        [
+          "MTH 2201",
+          "Applied Mathematics for Engineers",
+          "JUI",
+          "Junaid Ul Islam"
+        ]
+      ]
+    ]
+  },
+  {
+    "program": "B.Sc. in Civil Engineering (Evening)",
+    "intake": "10",
+    "section": "1",
+    "image": "routine_images/12_B_Sc__in_Civil_Engg_Evening_p14.png",
+    "pdf": "routine_pages/12_B_Sc__in_Civil_Engg_Evening_p14.pdf",
+    "tables": [
+      [
+        [
+          "Day/Time",
+          "08:00 AM to\n09:15 AM",
+          "09:15 AM to\n10:30 AM",
+          "10:30 AM to\n11:45 AM",
+          "11:45 AM to\n01:00 PM",
+          "03:15 PM to\n04:30 PM",
+          "04:30 PM to\n05:45 PM",
+          "05:45 PM to\n07:00 PM",
+          "07:00 PM to\n08:15 PM"
+        ],
+        [
+          "Fri",
+          "ICT 2202\nFC: MDTH\nR: 4301",
+          "ICT 2202\nFC: MDTH\nR: 4301",
+          "CE 2111\nFC: MM\nR: 3804",
+          "CE 2111\nFC: MM\nR: 3804",
+          "CE 2171\nFC: MJI\nR: 3805",
+          "CE 2171\nFC: MJI\nR: 3805",
+          "ECO 2201\nFC: AWR\nR: 3805",
+          "ECO 2201\nFC: AWR\nR: 3805"
+        ],
+        [
+          "Sat",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "CE 2172\nFC: NSH\nR: 3801",
+          "CE 2172\nFC: NSH\nR: 3801"
+        ]
+      ],
+      [
+        [
+          "Course Code",
+          "Course Tile",
+          "Faculty Code (FC)",
+          "Faculty Name"
+        ],
+        [
+          "CE 2111",
+          "Mechanics of Solies II",
+          "MM",
+          "Mostafa Mahmud"
+        ],
+        [
+          "CE 2171",
+          "Environmental Engineering I",
+          "MJI",
+          "Md. Jobayer Islam"
+        ],
+        [
+          "ECO 2201",
+          "Engineering Economics",
+          "AWR",
+          "Md. Anwar Hossen"
+        ],
+        [
+          "ICT 2202",
+          "Computer Programming Sessional",
+          "MDTH",
+          "Md. Tanzil Hawlader"
+        ]
+      ]
+    ]
+  },
+  {
+    "program": "B.Sc. in Civil Engineering (Evening)",
+    "intake": "10",
+    "section": "1",
+    "image": "routine_images/12_B_Sc__in_Civil_Engg_Evening_p15.png",
+    "pdf": "routine_pages/12_B_Sc__in_Civil_Engg_Evening_p15.pdf",
+    "tables": [
+      [
+        [
+          "Day/Time",
+          "05:45 PM to 07:00 PM",
+          "07:00 PM to 08:15 PM"
+        ],
+        [
+          "Thu",
+          "CE 2172\nFC: MWA\nR: 3801",
+          "CE 2172\nFC: MWA\nR: 3801"
+        ]
+      ],
+      [
+        [
+          "Course Code",
+          "Course Tile",
+          "Faculty Code (FC)",
+          "Faculty Name"
+        ],
+        [
+          "CE 2172",
+          "Environmental Engineering Lab",
+          "MWA",
+          "Most. Wahida Asna"
+        ]
+      ]
+    ]
+  },
+  {
+    "program": "B.Sc. in Civil Engineering (Evening)",
+    "intake": "10",
+    "section": "2",
+    "image": "routine_images/12_B_Sc__in_Civil_Engg_Evening_p16.png",
+    "pdf": "routine_pages/12_B_Sc__in_Civil_Engg_Evening_p16.pdf",
+    "tables": [
+      [
+        [
+          "Day/Time",
+          "08:00 AM to\n09:15 AM",
+          "09:15 AM to\n10:30 AM",
+          "10:30 AM to\n11:45 AM",
+          "11:45 AM to\n01:00 PM",
+          "03:15 PM to\n04:30 PM",
+          "04:30 PM to\n05:45 PM",
+          "05:45 PM to\n07:00 PM",
+          "07:00 PM to\n08:15 PM"
+        ],
+        [
+          "Thu",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "ICT 2202\nFC: MNAH\nR: 4301",
+          "ICT 2202\nFC: MNAH\nR: 4301"
+        ],
+        [
+          "Fri",
+          "CE 2111\nFC: MM\nR: 3907",
+          "CE 2111\nFC: MM\nR: 3907",
+          "CE 2171\nFC: MJI\nR: 3805",
+          "CE 2171\nFC: MJI\nR: 3805",
+          "ECO 2201\nFC: AWR\nR: 3907",
+          "ECO 2201\nFC: AWR\nR: 3907",
+          "CE 2172\nFC: MDZH\nR: 3801",
+          "CE 2172\nFC: MDZH\nR: 3801"
+        ]
+      ],
+      [
+        [
+          "Course Code",
+          "Course Tile",
+          "Faculty Code (FC)",
+          "Faculty Name"
+        ],
+        [
+          "CE 2111",
+          "Mechanics of Solies II",
+          "MM",
+          "Mostafa Mahmud"
+        ],
+        [
+          "CE 2171",
+          "Environmental Engineering I",
+          "MJI",
+          "Md. Jobayer Islam"
+        ],
+        [
+          "CE 2172",
+          "Environmental Engineering Lab",
+          "MDZH",
+          "Md. Zahed Hossain"
+        ],
+        [
+          "ECO 2201",
+          "Engineering Economics",
+          "AWR",
+          "Md. Anwar Hossen"
+        ]
+      ]
+    ]
+  },
+  {
+    "program": "B.Sc. in Civil Engineering (Evening)",
+    "intake": "11",
+    "section": "1",
+    "image": "routine_images/12_B_Sc__in_Civil_Engg_Evening_p17.png",
+    "pdf": "routine_pages/12_B_Sc__in_Civil_Engg_Evening_p17.pdf",
+    "tables": [
+      [
+        [
+          "Day/Time",
+          "08:00 AM to\n09:15 AM",
+          "09:15 AM to\n10:30 AM",
+          "10:30 AM to\n11:45 AM",
+          "11:45 AM to\n01:00 PM",
+          "03:15 PM to\n04:30 PM",
+          "04:30 PM to\n05:45 PM",
+          "05:45 PM to\n07:00 PM",
+          "07:00 PM to\n08:15 PM",
+          "08:15 PM to\n09:30 PM"
+        ],
+        [
+          "Thu",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "CE 1211\nFC: MISH\nR: 3805",
+          "CE 1211\nFC: MISH\nR: 3805",
+          ""
+        ],
+        [
+          "Fri",
+          "PHY 1101\nFC: RMU\nR: 3805",
+          "PHY 1101\nFC: RMU\nR: 3805",
+          "PHY 1102\nFC: RMU\nR: 2805",
+          "PHY 1102\nFC: RMU\nR: 2805",
+          "CE 2112\nFC: AHJ\nR: 4303",
+          "CE 2112\nFC: AHJ\nR: 4303",
+          "MTH 1201\nFC: MUH\nR: 3804",
+          "MTH 1201\nFC: MUH\nR: 3804",
+          "MTH 1201\nFC: MUH\nR: 3804"
+        ],
+        [
+          "Sat",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "HIS 1201\nFC: ZAD\nR: 3805",
+          "HIS 1201\nFC: ZAD\nR: 3805",
+          ""
+        ]
+      ],
+      [
+        [
+          "Course Code",
+          "Course Tile",
+          "Faculty Code (FC)",
+          "Faculty Name"
+        ],
+        [
+          "CE 1211",
+          "Mechanics of Solids I",
+          "MISH",
+          "Md. Ismail Hossain"
+        ],
+        [
+          "CE 2112",
+          "Computer Aided Civil Engineering Drawing",
+          "AHJ",
+          "Ahmed Jarif"
+        ],
+        [
+          "HIS 1201",
+          "History of the Emergence of Independent Bangladesh",
+          "ZAD",
+          "Zunaid Ahmed"
+        ],
+        [
+          "MTH 1201",
+          "Differential Equations and Statistics",
+          "MUH",
+          "Mahede-Ul-Hassan"
+        ],
+        [
+          "PHY 1101",
+          "Physics",
+          "RMU",
+          "Rubaiyat Mustari"
+        ],
+        [
+          "PHY 1102",
+          "Physics Laboratory",
+          "RMU",
+          "Rubaiyat Mustari"
+        ]
+      ]
+    ]
+  },
+  {
+    "program": "B.Sc. in Civil Engineering (Evening)",
+    "intake": "11",
+    "section": "1",
+    "image": "routine_images/12_B_Sc__in_Civil_Engg_Evening_p18.png",
+    "pdf": "routine_pages/12_B_Sc__in_Civil_Engg_Evening_p18.pdf",
+    "tables": [
+      [
+        [
+          "Day/Time",
+          "10:30 AM to 11:45 AM",
+          "11:45 AM to 01:00 PM",
+          "03:15 PM to 04:30 PM",
+          "04:30 PM to 05:45 PM"
+        ],
+        [
+          "Fri",
+          "PHY 1102\nFC: RSH\nR: 3901",
+          "PHY 1102\nFC: RSH\nR: 3901",
+          "PHY 1102\nFC: RMU\nR: 2805",
+          "PHY 1102\nFC: RMU\nR: 2805"
+        ]
+      ],
+      [
+        [
+          "Course Code",
+          "Course Tile",
+          "Faculty Code (FC)",
+          "Faculty Name"
+        ],
+        [
+          "PHY 1102",
+          "Physics Laboratory",
+          "RMU",
+          "Rubaiyat Mustari"
+        ],
+        [
+          "PHY 1102",
+          "Physics Laboratory",
+          "RSH",
+          "Riadus Saleh"
+        ]
+      ]
+    ]
+  },
+  {
+    "program": "B.Sc. in Civil Engineering (Evening)",
+    "intake": "11",
+    "section": "2",
+    "image": "routine_images/12_B_Sc__in_Civil_Engg_Evening_p19.png",
+    "pdf": "routine_pages/12_B_Sc__in_Civil_Engg_Evening_p19.pdf",
+    "tables": [
+      [
+        [
+          "Day/Time",
+          "08:00 AM to\n09:15 AM",
+          "09:15 AM to\n10:30 AM",
+          "10:30 AM to\n11:45 AM",
+          "11:45 AM to\n01:00 PM",
+          "03:15 PM to\n04:30 PM",
+          "04:30 PM to\n05:45 PM",
+          "05:45 PM to\n07:00 PM",
+          "07:00 PM to\n08:15 PM"
+        ],
+        [
+          "Thu",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "PHY 1102\nFC: RMU\nR: 2805",
+          "PHY 1102\nFC: RMU\nR: 2805"
+        ],
+        [
+          "Fri",
+          "CE 2112\nFC: MSAQ\nR: 4303",
+          "CE 2112\nFC: MSAQ\nR: 4303",
+          "MTH 1201\nFC: MUH\nR: 1106",
+          "MTH 1201\nFC: MUH\nR: 1106",
+          "CE 1211\nFC: MISH\nR: 1106",
+          "CE 1211\nFC: MISH\nR: 1106",
+          "PHY 1101\nFC: RSH\nR: 1106",
+          "PHY 1101\nFC: RSH\nR: 1106"
+        ],
+        [
+          "Sat",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "HIS 1201\nFC: SSC\nR: 3907",
+          "HIS 1201\nFC: SSC\nR: 3907"
+        ]
+      ],
+      [
+        [
+          "Course Code",
+          "Course Tile",
+          "Faculty Code (FC)",
+          "Faculty Name"
+        ],
+        [
+          "CE 1211",
+          "Mechanics of Solids I",
+          "MISH",
+          "Md. Ismail Hossain"
+        ],
+        [
+          "CE 2112",
+          "Computer Aided Civil Engineering Drawing",
+          "MSAQ",
+          "Md. Saowad Al Qavi"
+        ],
+        [
+          "HIS 1201",
+          "History of the Emergence of Independent Bangladesh",
+          "SSC",
+          "Sadia Sharmin Chhanda"
+        ],
+        [
+          "MTH 1201",
+          "Differential Equations and Statistics",
+          "MUH",
+          "Mahede-Ul-Hassan"
+        ],
+        [
+          "PHY 1101",
+          "Physics",
+          "RSH",
+          "Riadus Saleh"
+        ],
+        [
+          "PHY 1102",
+          "Physics Laboratory",
+          "RMU",
+          "Rubaiyat Mustari"
+        ]
+      ]
+    ]
+  },
+  {
+    "program": "B.Sc. in Civil Engineering (Evening)",
+    "intake": "12",
+    "section": "1",
+    "image": "routine_images/12_B_Sc__in_Civil_Engg_Evening_p20.png",
+    "pdf": "routine_pages/12_B_Sc__in_Civil_Engg_Evening_p20.pdf",
+    "tables": [
+      [
+        [
+          "Day/Time",
+          "08:00 AM to\n09:15 AM",
+          "09:15 AM to\n10:30 AM",
+          "10:30 AM to\n11:45 AM",
+          "11:45 AM to\n01:00 PM",
+          "03:15 PM to\n04:30 PM",
+          "04:30 PM to\n05:45 PM",
+          "05:45 PM to\n07:00 PM",
+          "07:00 PM to\n08:15 PM",
+          "08:15 PM to\n09:30 PM"
+        ],
+        [
+          "Thu",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "CE 1111\nFC: MDTH\nR: 3804",
+          "CE 1111\nFC: MDTH\nR: 3804"
+        ],
+        [
+          "Fri",
+          "EEE 1301\nFC: eeen1\nR: 3804",
+          "EEE 1301\nFC: eeen1\nR: 3804",
+          "CE 1314\nFC: MDZH\nR: 3907",
+          "CE 1314\nFC: MDZH\nR: 3907",
+          "MTH 1201\nFC: MUH\nR: 3804",
+          "MTH 1201\nFC: MUH\nR: 3804",
+          "CE 2112\nFC: MNAH\nR: 4303",
+          "CE 2112\nFC: MNAH\nR: 4303",
+          ""
+        ]
+      ],
+      [
+        [
+          "Course Code",
+          "Course Tile",
+          "Faculty Code (FC)",
+          "Faculty Name"
+        ],
+        [
+          "CE 1111",
+          "Analytic Mechanics",
+          "MDTH",
+          "Md. Tanzil Hawlader"
+        ],
+        [
+          "CE 1314",
+          "Practical Surveying",
+          "MDZH",
+          "Md. Zahed Hossain"
+        ],
+        [
+          "MTH 1201",
+          "Differential Equations and Statistics",
+          "MUH",
+          "Mahede-Ul-Hassan"
+        ]
+      ]
+    ]
+  },
+  {
     "program": "B.Sc. in EEE",
     "intake": "35",
     "section": "1",
@@ -36359,7 +37722,7 @@
           "",
           "LAW 1101\nFC: KRA\nR: 1508",
           "",
-          "GED 1102\nFC: MRL\nR: 1510"
+          "GED 1102\nFC: MACa\nR: 1510"
         ],
         [
           "TUE",
@@ -36376,14 +37739,14 @@
           "",
           "",
           "GED 1105\nFC: JNS\nR: 1504-A",
-          "GED 1102\nFC: MRL\nR: 1504-A",
+          "GED 1102\nFC: MACa\nR: 1504-A",
           "ENG 1104\nFC: TAAH\nR: 1510"
         ],
         [
           "THR",
           "",
           "",
-          "GED 1102\nFC: MRL\nR: 3904",
+          "GED 1102\nFC: MACa\nR: 3904",
           "",
           "ENG 1104\nFC: TAAH\nR: 1508",
           ""
@@ -36420,7 +37783,7 @@
         [
           "GED 1102",
           "Development of Legal System in Bangladesh",
-          "MRL",
+          "MACa",
           "Md. Mostafizur Rahman Limon Sarker"
         ],
         [
