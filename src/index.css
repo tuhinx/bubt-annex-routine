@@ -192,6 +192,34 @@ img {
 }
 
 /* Loaders */
+.loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #f8fafc;
+    z-index: 9999;
+}
+
+.loading-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    text-align: center;
+}
+
+.loading-state p {
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: 0.01em;
+}
+
 .loader {
     width: 48px;
     height: 48px;

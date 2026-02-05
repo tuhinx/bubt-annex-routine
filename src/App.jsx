@@ -118,14 +118,14 @@ function App() {
 
     if (initialLoading) {
         return (
-            <div className="app-container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+            <div className="loading-screen">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     className="loading-state"
                 >
                     <div className="loader"></div>
-                    <p style={{ marginTop: '1rem', color: 'var(--text-muted)', fontWeight: '500' }}>Initializing Portal...</p>
+                    <p>Initializing Portal...</p>
                 </motion.div>
             </div>
         )
