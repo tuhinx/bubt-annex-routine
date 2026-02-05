@@ -1,14 +1,30 @@
 {
     "builds": [
         {
+            "src": "package.json",
+            "use": "@vercel/static-build",
+            "config": {
+                "distDir": "dist"
+            }
+        },
+        {
             "src": "server.js",
-            "use": "@vercel/node"
+            "use": "@vercel/node",
+            "config": {
+                "includeFiles": [
+                    "storage/**"
+                ]
+            }
         }
     ],
     "rewrites": [
         {
             "source": "/api/(.*)",
             "destination": "/server.js"
+        },
+        {
+            "source": "/(.*)",
+            "destination": "/index.html"
         }
     ]
 }
