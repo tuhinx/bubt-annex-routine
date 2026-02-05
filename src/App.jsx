@@ -19,31 +19,11 @@ function App() {
     const [result, setResult] = useState(null)
 
     useEffect(() => {
-        fetch('http://localhost:3001/api/routines/db', {
-            headers: { 'x-api-key': 'bubt_2026_XR8fKQ9P1MZ6E4JHdA' }
-        })
-            .then(async res => {
-                if (!res.ok) throw new Error(`Server error: ${res.status}`)
-                return res.json()
-            })
-            .then(msg => {
-                if (!msg.payload) throw new Error('Invalid server response')
-
-                // Decode the obfuscated payload (handling UTF-8 correctly)
-                // The server sends { payload: "base64string..." }
-                try {
-                    const binaryString = atob(msg.payload)
-                    const bytes = Uint8Array.from(binaryString, c => c.charCodeAt(0))
-                    const jsonString = new TextDecoder().decode(bytes)
-
-                    const data = JSON.parse(jsonString)
-                    setDb(data)
-                    setLoading(false)
-                } catch (e) {
-                    console.error('Failed to decode data', e)
-                    setError('Data decryption failed')
-                    setLoading(false)
-                }
+        fetch('/.routines/routine_db.json')
+            .then(res => res.json())
+            .then(data => {
+                setDb(data)
+                setLoading(false)
             })
             .catch(err => {
                 console.error(err)
@@ -73,42 +53,6 @@ function App() {
         setTimeout(() => {
             document.querySelector('.result-container')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
         }, 100)
-    }
-
-    const handleDownload = async (encryptedPath, fileName, type) => {
-        try {
-            // Call backend API with encrypted path
-            const response = await fetch(`http://localhost:3001/api/download/${type}/${encryptedPath}`, {
-                headers: { 'x-api-key': 'bubt_2026_XR8fKQ9P1MZ6E4JHdA' }
-            })
-            if (!response.ok) throw new Error('File not found')
-
-            // Create blob from response (stores in browser temp memory)
-            const blob = await response.blob()
-
-            // Generate temporary blob URL (blob:http://... format)
-            // This URL is temporary and doesn't expose actual file path
-            const tempUrl = window.URL.createObjectURL(blob)
-
-            // Create hidden download link
-            const link = document.createElement('a')
-            link.href = tempUrl
-            link.download = fileName
-            link.style.display = 'none'
-
-            // Trigger download
-            document.body.appendChild(link)
-            link.click()
-
-            // Cleanup: remove link and revoke temp URL
-            setTimeout(() => {
-                document.body.removeChild(link)
-                window.URL.revokeObjectURL(tempUrl)
-            }, 100)
-        } catch (error) {
-            console.error('Download failed:', error)
-            alert('Failed to download file. Please try again.')
-        }
     }
 
 
@@ -237,7 +181,7 @@ function App() {
                             </div>
                             <div className="glass" style={{ padding: '0.5rem', borderRadius: 'var(--radius-sm)' }}>
                                 <img
-                                    src={`http://localhost:3001/api/view/image/${result.image}`}
+                                    src={`/.routines/${result.image}`}
                                     alt="Official Routine"
                                     style={{ width: '100%', height: 'auto', borderRadius: 'var(--radius-md)' }}
                                 />
