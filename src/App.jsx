@@ -168,7 +168,7 @@ function App() {
 
 
 
-                        <div style={{ marginTop: '3rem' }}>
+                        <div style={{ marginTop: '1.5rem' }}>
                             <div className="section-header">
                                 <ImageIcon size={20} />
                                 <span>Original Routine Reference</span>
