@@ -1,0 +1,52 @@
+name: Seasonal Routine Reset
+
+on:
+  schedule:
+    # Run at 00:00 UTC on the 5th day of every 4th month (Jan, May, Sep)
+    # This aligns with typical Trimester starts (Spring, Summer, Fall)
+    - cron: '0 0 5 */4 *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  reset-and-refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r .scripts/requirements.txt
+          pip install schedule
+
+      - name: Install Playwright Browsers
+        run: |
+          playwright install --with-deps chromium
+
+      - name: Run Downloader with CLEAN flag
+        # The --clean flag will delete the 'public/.routines' folder before starting
+        # This removes old routines that are no longer on the website
+        run: python .scripts/routine_sniper.py --clean
+
+      - name: Run Indexer
+        run: python .scripts/routine_indexer.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          
+          # Add all files (including deletions)
+          git add --all
+          
+          # Check for changes and commit
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Seasonal Reset: Purged old routines and re-downloaded fresh data [skip ci]" && git push)
