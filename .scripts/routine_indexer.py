@@ -55,8 +55,8 @@ def process_pdf(filepath):
     base_name = os.path.basename(filepath).replace('.pdf', '')
     is_evening = "evening" in base_name.lower()
     
-    # Script is now in .scripts/, so go up to root, then to public/.routines
-    base_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "public", ".routines")
+    # Script is now in .scripts/, so go up to root, then to storage/routines
+    base_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "storage", "routines")
     imgs_dir = os.path.join(base_dir, "routine_images")
     pages_dir = os.path.join(base_dir, "routine_pages")
     
@@ -112,8 +112,8 @@ def process_pdf(filepath):
     return data_list
 
 def main():
-    # Script is now in .scripts/, so go up to root, then to public/.routines
-    DOWNLOAD_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "public", ".routines")
+    # Script is now in .scripts/, so go up to root, then to storage/routines
+    DOWNLOAD_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "storage", "routines")
     # Ensure sub-folders exist without clearing them
     for sub in ["routine_images", "routine_pages"]:
         d = os.path.join(DOWNLOAD_DIR, sub)

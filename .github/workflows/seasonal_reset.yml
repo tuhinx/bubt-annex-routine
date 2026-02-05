@@ -33,7 +33,7 @@ jobs:
           playwright install --with-deps chromium
 
       - name: Run Downloader with CLEAN flag
-        # The --clean flag will delete the 'public/.routines' folder before starting
+        # The --clean flag will delete the 'storage/routines' folder before starting
         # This removes old routines that are no longer on the website
         run: python .scripts/routine_sniper.py --clean
 

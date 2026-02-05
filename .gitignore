@@ -24,4 +24,6 @@ dist-ssr
 *.sw?
 
 # Private storage
-storage/
+# Private storage
+storage/*
+!storage/routines/
