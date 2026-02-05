@@ -55,10 +55,10 @@ def process_pdf(filepath):
     base_name = os.path.basename(filepath).replace('.pdf', '')
     is_evening = "evening" in base_name.lower()
     
-    # Script is now in .scripts/, so go up to root, then to storage/routines
-    base_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "storage", "routines")
-    imgs_dir = os.path.join(base_dir, "routine_images")
-    pages_dir = os.path.join(base_dir, "routine_pages")
+    # Script is now in .scripts/, so go up to root, then to storage/routines/class
+    base_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "storage", "routines", "class")
+    imgs_dir = os.path.join(base_dir, "class_images")
+    pages_dir = os.path.join(base_dir, "class_pages")
     
     for d in [imgs_dir, pages_dir]:
         if not os.path.exists(d): os.makedirs(d)
@@ -104,18 +104,18 @@ def process_pdf(filepath):
                     "program": prog,
                     "intake": itk,
                     "section": sec,
-                    "image": f"routine_images/{img_filename}",
-                    "pdf": f"routine_pages/{pdf_filename}",
+                    "image": f"class_images/{img_filename}",
+                    "pdf": f"class_pages/{pdf_filename}",
                     "tables": page.extract_tables()
                 })
     doc.close()
     return data_list
 
 def main():
-    # Script is now in .scripts/, so go up to root, then to storage/routines
-    DOWNLOAD_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "storage", "routines")
+    # Script is now in .scripts/, so go up to root, then to storage/routines/class
+    DOWNLOAD_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "storage", "routines", "class")
     # Ensure sub-folders exist without clearing them
-    for sub in ["routine_images", "routine_pages"]:
+    for sub in ["class_images", "class_pages"]:
         d = os.path.join(DOWNLOAD_DIR, sub)
         if not os.path.exists(d):
             os.makedirs(d)
@@ -123,7 +123,7 @@ def main():
     all_results = []
     for f in os.listdir(DOWNLOAD_DIR):
         if f.lower().endswith(".pdf") and "_" in f: # Heuristic to ignore generated pdfs if they leak
-            if "routine_pages" in f: continue
+            if "class_pages" in f: continue
             print(f"[*] Parsing {f}...")
             path = os.path.join(DOWNLOAD_DIR, f)
             try:
@@ -142,7 +142,7 @@ def main():
     final_db = [x for x in final_db if x['intake'] != "Unknown" and x['program'] != "Unknown"]
     final_db.sort(key=lambda x: (x['program'], int(x['intake']) if x['intake'].isdigit() else 0))
 
-    db_path = os.path.join(DOWNLOAD_DIR, "routine_db.json")
+    db_path = os.path.join(DOWNLOAD_DIR, "class_db.json")
     with open(db_path, "w", encoding="utf-8") as f:
         json.dump(final_db, f, indent=2)
     

@@ -7,15 +7,15 @@ This hidden folder contains all the Python scripts used for scraping and process
 ### `routine_sniper.py`
 Downloads PDF routines from the BUBT website using Playwright.
 - **Usage**: `python routine_sniper.py` (incremental) or `python routine_sniper.py --clean` (fresh start)
-- **Output**: PDFs saved to `../public/.routines/`
+- **Output**: PDFs saved to `storage/routines/class/`
 
 ### `routine_indexer.py`
 Processes downloaded PDFs and generates the searchable JSON database.
 - **Usage**: `python routine_indexer.py`
 - **Output**: 
-  - `../public/.routines/routine_db.json` (main database)
-  - `../public/.routines/routine_images/` (PNG previews)
-  - `../public/.routines/routine_pages/` (individual PDF pages)
+  - `storage/routines/class/class_db.json` (main database)
+  - `storage/routines/class/class_images/` (PNG previews)
+  - `storage/routines/class/class_pages/` (individual PDF pages)
 
 ### `auto_updater.py`
 Runs both sniper and indexer on a schedule (every 24 hours).

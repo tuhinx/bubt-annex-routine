@@ -63,12 +63,26 @@ function decryptPath(encryptedPath) {
 // API endpoint to get routine database (PROTECTED)
 app.get('/api/routines/db', requireAuth, (req, res) => {
     try {
+        const { type } = req.query
+        if (!['class', 'exam'].includes(type)) {
+            return res.status(400).json({ error: 'Invalid routine type' })
+        }
+
         // Prevent caching
         res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate')
         res.setHeader('Pragma', 'no-cache')
         res.setHeader('Expires', '0')
 
-        const dbPath = path.join(STORAGE_DIR, 'routine_db.json')
+        const dbFileName = type === 'exam' ? 'exam_db.json' : 'class_db.json'
+        const dbPath = path.join(STORAGE_DIR, type, dbFileName)
+
+        if (!fs.existsSync(dbPath)) {
+            // Return empty list if DB doesn't exist yet
+            const jsonString = JSON.stringify([])
+            const obfuscatedPayload = Buffer.from(jsonString).toString('base64')
+            return res.json({ payload: obfuscatedPayload })
+        }
+
         const data = fs.readFileSync(dbPath, 'utf8')
         const routines = JSON.parse(data)
 
@@ -80,7 +94,6 @@ app.get('/api/routines/db', requireAuth, (req, res) => {
         }))
 
         // Obfuscate the entire response so it's not readable in Network tab
-        // We convert the JSON to a Base64 string
         const jsonString = JSON.stringify(encryptedRoutines)
         const obfuscatedPayload = Buffer.from(jsonString).toString('base64')
 
@@ -94,10 +107,9 @@ app.get('/api/routines/db', requireAuth, (req, res) => {
 })
 
 // API endpoint to view/display files (for img src)
-app.get('/api/view/:type/:encryptedPath', (req, res) => {
-    // ... existing view logic ...
+app.get('/api/view/:routineType/:fileType/:encryptedPath', (req, res) => {
     try {
-        const { encryptedPath, type } = req.params
+        const { encryptedPath, fileType, routineType } = req.params
 
         // Decrypt the file path
         const filePath = decryptPath(encryptedPath)
@@ -106,13 +118,18 @@ app.get('/api/view/:type/:encryptedPath', (req, res) => {
             return res.status(400).json({ error: 'Invalid file reference' })
         }
 
+        // Validate routine type
+        if (!['class', 'exam'].includes(routineType)) {
+            return res.status(400).json({ error: 'Invalid routine type' })
+        }
+
         // Validate file type
-        if (!['image', 'pdf'].includes(type)) {
+        if (!['image', 'pdf'].includes(fileType)) {
             return res.status(400).json({ error: 'Invalid file type' })
         }
 
         // Construct full file path
-        const fullPath = path.join(STORAGE_DIR, filePath)
+        const fullPath = path.join(STORAGE_DIR, routineType, filePath)
 
         // Check if file exists
         if (!fs.existsSync(fullPath)) {
@@ -150,9 +167,9 @@ app.get('/api/view/:type/:encryptedPath', (req, res) => {
 })
 
 // API endpoint to download files (PROTECTED)
-app.get('/api/download/:type/:encryptedPath', requireAuth, (req, res) => {
+app.get('/api/download/:routineType/:fileType/:encryptedPath', requireAuth, (req, res) => {
     try {
-        const { encryptedPath, type } = req.params
+        const { encryptedPath, fileType, routineType } = req.params
 
         // Decrypt the file path
         const filePath = decryptPath(encryptedPath)
@@ -161,13 +178,18 @@ app.get('/api/download/:type/:encryptedPath', requireAuth, (req, res) => {
             return res.status(400).json({ error: 'Invalid file reference' })
         }
 
+        // Validate routine type
+        if (!['class', 'exam'].includes(routineType)) {
+            return res.status(400).json({ error: 'Invalid routine type' })
+        }
+
         // Validate file type
-        if (!['image', 'pdf'].includes(type)) {
+        if (!['image', 'pdf'].includes(fileType)) {
             return res.status(400).json({ error: 'Invalid file type' })
         }
 
         // Construct full file path
-        const fullPath = path.join(STORAGE_DIR, filePath)
+        const fullPath = path.join(STORAGE_DIR, routineType, filePath)
 
         // Check if file exists
         if (!fs.existsSync(fullPath)) {

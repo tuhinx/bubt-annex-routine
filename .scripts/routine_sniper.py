@@ -6,8 +6,8 @@ from playwright.sync_api import sync_playwright
 
 # Configuration
 BASE_URL = "https://www.bubt.edu.bd/routines"
-# Script is now in .scripts/, so go up to root, then to storage/routines
-DOWNLOAD_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "storage", "routines")
+# Script is now in .scripts/, so go up to root, then to storage/routines/class
+DOWNLOAD_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "storage", "routines", "class")
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
 
 def ensure_dir(directory, clear=False):

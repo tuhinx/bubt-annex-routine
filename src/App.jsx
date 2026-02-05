@@ -12,17 +12,26 @@ const API_KEY = 'bubt_2026_XR8fKQ9P1MZ6E4JHdA'
 
 function App() {
     const [db, setDb] = useState([])
-    const [loading, setLoading] = useState(true)
+    const [initialLoading, setInitialLoading] = useState(true)
+    const [isSwitching, setIsSwitching] = useState(false)
     const [error, setError] = useState(null)
 
     // Selection state
+    const [routineType, setRoutineType] = useState('class') // 'class' or 'exam'
     const [program, setProgram] = useState('')
     const [intake, setIntake] = useState('')
     const [section, setSection] = useState('')
     const [result, setResult] = useState(null)
 
     useEffect(() => {
-        fetch('/api/routines/db', {
+        setIsSwitching(true)
+        setDb([]) // Clear current data immediately to avoid "same show" confusion
+        setResult(null)
+        setProgram('')
+        setIntake('')
+        setSection('')
+
+        fetch(`/api/routines/db?type=${routineType}`, {
             headers: {
                 'x-api-key': API_KEY
             }
@@ -31,7 +40,6 @@ function App() {
             .then(data => {
                 if (data.payload) {
                     try {
-                        // Decrypt/Deobfuscate the payload
                         const jsonString = atob(data.payload)
                         const routines = JSON.parse(jsonString)
                         setDb(routines)
@@ -39,28 +47,37 @@ function App() {
                         console.error('Decryption failed', e)
                         setError('Failed to process routine data.')
                     }
+                } else if (Array.isArray(data)) {
+                    setDb(data)
                 } else {
-                    setDb(data) // Fallback if not encrypted (shouldn't happen with current server)
+                    console.error('Invalid data format', data)
+                    setDb([])
+                    if (data.error) setError(data.error)
                 }
-                setLoading(false)
+                setInitialLoading(false)
+                setIsSwitching(false)
             })
             .catch(err => {
                 console.error(err)
                 setError('Failed to load routine database.')
-                setLoading(false)
+                setInitialLoading(false)
+                setIsSwitching(false)
             })
-    }, [])
+    }, [routineType])
 
     // Derived options
-    const programs = useMemo(() => [...new Set(db.map(x => x.program))].sort(), [db])
+    const programs = useMemo(() => {
+        if (!Array.isArray(db)) return []
+        return [...new Set(db.map(x => x.program))].sort()
+    }, [db])
 
     const intakes = useMemo(() => {
-        if (!program) return []
+        if (!program || !Array.isArray(db)) return []
         return [...new Set(db.filter(x => x.program === program).map(x => x.intake))].sort((a, b) => b - a)
     }, [db, program])
 
     const sections = useMemo(() => {
-        if (!program || !intake) return []
+        if (!program || !intake || !Array.isArray(db)) return []
         return [...new Set(db.filter(x => x.program === program && x.intake === intake).map(x => x.section))].sort((a, b) => a - b)
     }, [db, program, intake])
 
@@ -74,9 +91,9 @@ function App() {
         }, 100)
     }
 
-    const handleDownload = async (encryptedPath, filename, type) => {
+    const handleDownload = async (encryptedPath, filename, fileType) => {
         try {
-            const response = await fetch(`/api/download/${type}/${encryptedPath}`, {
+            const response = await fetch(`/api/download/${routineType}/${fileType}/${encryptedPath}`, {
                 headers: {
                     'x-api-key': API_KEY
                 }
@@ -99,10 +116,17 @@ function App() {
         }
     }
 
-    if (loading) {
+    if (initialLoading) {
         return (
             <div className="app-container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-                <p>Initializing Portal...</p>
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    className="loading-state"
+                >
+                    <div className="loader"></div>
+                    <p style={{ marginTop: '1rem', color: 'var(--text-muted)', fontWeight: '500' }}>Initializing Portal...</p>
+                </motion.div>
             </div>
         )
     }
@@ -115,21 +139,52 @@ function App() {
                 animate={{ opacity: 1, y: 0 }}
             >
                 <h1>BUBT Annex</h1>
-                <p>The smartest way for BUBTians to access their class schedules with one click.</p>
+                <p>The smartest way for BUBTians to access their {routineType === 'exam' ? 'exam' : 'class'} schedules with one click.</p>
+
+                <div className="tab-container glass">
+                    {['class', 'exam'].map((type) => (
+                        <button
+                            key={type}
+                            className={`tab-btn ${routineType === type ? 'active' : ''}`}
+                            onClick={() => setRoutineType(type)}
+                        >
+                            {routineType === type && (
+                                <motion.span
+                                    layoutId="activeTab"
+                                    className="active-bg"
+                                    transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
+                                />
+                            )}
+                            <span className="tab-text">
+                                {type === 'class' ? 'Class Routine' : 'Exam Routine'}
+                            </span>
+                        </button>
+                    ))}
+                </div>
             </motion.header>
 
             <motion.div
-                className="search-card glass"
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.2 }}
+                className={`search-card glass ${isSwitching ? 'switching' : ''}`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4 }}
             >
+                {isSwitching && (
+                    <motion.div
+                        className="switching-overlay"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                    >
+                        <div className="loader-sm"></div>
+                    </motion.div>
+                )}
                 <div className="form-group">
                     <label>Academic Program</label>
                     <select
                         className="form-select"
                         value={program}
                         onChange={(e) => { setProgram(e.target.value); setIntake(''); setSection(''); }}
+                        disabled={isSwitching}
                     >
                         <option value="">Choose Program</option>
                         {programs.map(p => <option key={p} value={p}>{p}</option>)}
@@ -141,7 +196,7 @@ function App() {
                     <select
                         className="form-select"
                         value={intake}
-                        disabled={!program}
+                        disabled={!program || isSwitching}
                         onChange={(e) => { setIntake(e.target.value); setSection(''); }}
                     >
                         <option value="">Select Intake</option>
@@ -154,7 +209,7 @@ function App() {
                     <select
                         className="form-select"
                         value={section}
-                        disabled={!intake}
+                        disabled={!intake || isSwitching}
                         onChange={(e) => setSection(e.target.value)}
                     >
                         <option value="">Select Section</option>
@@ -164,7 +219,7 @@ function App() {
 
                 <button
                     className="btn-search"
-                    disabled={!section}
+                    disabled={!section || isSwitching}
                     onClick={handleSearch}
                 >
                     <Search size={20} />
@@ -182,8 +237,12 @@ function App() {
                         exit={{ opacity: 0 }}
                     >
                         <Calendar size={64} style={{ margin: '0 auto 1.5rem', display: 'block' }} />
-                        <h3>Ready to help!</h3>
-                        <p>Select your program details above to unlock your schedule.</p>
+                        <h3>{routineType === 'exam' ? 'No Exam Routines Yet' : 'Ready to help!'}</h3>
+                        <p>
+                            {routineType === 'exam'
+                                ? 'Exam schedules will appear here once they are released by the university.'
+                                : 'Select your program details above to unlock your schedule.'}
+                        </p>
                     </motion.div>
                 ) : (
                     <motion.div
@@ -223,7 +282,7 @@ function App() {
                             </div>
                             <div className="glass" style={{ padding: '0.5rem', borderRadius: 'var(--radius-sm)' }}>
                                 <img
-                                    src={`/api/view/image/${result.image}`}
+                                    src={`/api/view/${routineType}/image/${result.image}`}
                                     alt="Official Routine"
                                     style={{ width: '100%', height: 'auto', borderRadius: 'var(--radius-md)' }}
                                 />

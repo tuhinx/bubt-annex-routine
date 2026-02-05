@@ -166,6 +166,112 @@ img {
     line-height: 1.5;
 }
 
+/* Seamless Switch Animations */
+.search-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+.search-card.switching {
+    opacity: 0.7;
+    filter: blur(1px);
+    pointer-events: none;
+}
+
+.switching-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.4);
+    z-index: 10;
+    border-radius: var(--radius-lg);
+}
+
+/* Loaders */
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid var(--primary-glow);
+    border-bottom-color: var(--primary);
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+.loader-sm {
+    width: 24px;
+    height: 24px;
+    border: 3px solid rgba(15, 81, 50, 0.1);
+    border-bottom-color: var(--primary);
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Tab Selector */
+.tab-container {
+    display: inline-flex;
+    padding: 0;
+    gap: 0;
+    margin-top: 1.5rem;
+    border-radius: var(--radius-md);
+    background: rgba(15, 81, 50, 0.05);
+    border: 1px solid rgba(15, 81, 50, 0.1);
+    overflow: hidden;
+}
+
+.tab-btn {
+    position: relative;
+    padding: 0.75rem 2rem;
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-family: inherit;
+    outline: none;
+}
+
+.tab-btn:hover {
+    color: var(--primary);
+}
+
+.tab-btn.active {
+    color: white;
+}
+
+.active-bg {
+    position: absolute;
+    inset: 0;
+    background: var(--primary);
+    border-radius: inherit;
+    box-shadow: 0 4px 6px -1px rgba(15, 81, 50, 0.2);
+    z-index: 0;
+}
+
+.tab-text {
+    position: relative;
+    z-index: 1;
+}
+
 /* Search Form */
 .search-card {
     background: white;
