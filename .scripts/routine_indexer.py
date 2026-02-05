@@ -46,7 +46,7 @@ def normalize_program_name(name, is_evening_file=False):
                 final_name += " (Evening)"
                 
     if "1 Year" in name and "MA in ELT" in final_name:
-        final_name = "MA in ELT (1 Year)"
+        final_name = "MA in ELT"
             
     return final_name.strip()
 
