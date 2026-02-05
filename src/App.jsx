@@ -187,7 +187,7 @@ function App() {
 
             <footer style={{ marginTop: '4rem', textAlign: 'center', color: 'var(--text-muted)', fontSize: '0.9rem', padding: '2rem 0' }}>
                 <p>
-                    &copy; 2026 BUBT Routine Portal &bull; Developed by <a href="https://github.com/tuhinx" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent)', textDecoration: 'none', fontWeight: '500' }}>Tuhinx</a>
+                    &copy; {new Date().getFullYear()} {'  '}BUBT Routine Portal &bull; Developed by <a href="https://github.com/tuhinx" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent)', textDecoration: 'none', fontWeight: '500' }}>Tuhinx</a>
                 </p>
             </footer>
         </div>
