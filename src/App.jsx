@@ -19,7 +19,8 @@ function App() {
     const [result, setResult] = useState(null)
 
     useEffect(() => {
-        fetch('http://localhost:3001/api/routines/db', {
+        // Use relative path - Vite proxy will forward this to http://localhost:3001
+        fetch('/api/routines/db', {
             headers: { 'x-api-key': 'bubt_2026_XR8fKQ9P1MZ6E4JHdA' }
         })
             .then(async res => {
@@ -78,7 +79,8 @@ function App() {
     const handleDownload = async (encryptedPath, fileName, type) => {
         try {
             // Call backend API with encrypted path
-            const response = await fetch(`http://localhost:3001/api/download/${type}/${encryptedPath}`, {
+            // Use relative path - Vite proxy will forward this to http://localhost:3001
+            const response = await fetch(`/api/download/${type}/${encryptedPath}`, {
                 headers: { 'x-api-key': 'bubt_2026_XR8fKQ9P1MZ6E4JHdA' }
             })
             if (!response.ok) throw new Error('File not found')
@@ -237,7 +239,7 @@ function App() {
                             </div>
                             <div className="glass" style={{ padding: '0.5rem', borderRadius: 'var(--radius-sm)' }}>
                                 <img
-                                    src={`http://localhost:3001/api/view/image/${result.image}`}
+                                    src={`/api/view/image/${result.image}`}
                                     alt="Official Routine"
                                     style={{ width: '100%', height: 'auto', borderRadius: 'var(--radius-md)' }}
                                 />
