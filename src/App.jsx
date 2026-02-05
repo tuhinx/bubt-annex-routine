@@ -7,6 +7,9 @@ import {
     Calendar
 } from 'lucide-react'
 
+// API Key for secure access
+const API_KEY = 'bubt_2026_XR8fKQ9P1MZ6E4JHdA'
+
 function App() {
     const [db, setDb] = useState([])
     const [loading, setLoading] = useState(true)
@@ -19,10 +22,26 @@ function App() {
     const [result, setResult] = useState(null)
 
     useEffect(() => {
-        fetch('/.routines/routine_db.json')
+        fetch('/api/routines/db', {
+            headers: {
+                'x-api-key': API_KEY
+            }
+        })
             .then(res => res.json())
             .then(data => {
-                setDb(data)
+                if (data.payload) {
+                    try {
+                        // Decrypt/Deobfuscate the payload
+                        const jsonString = atob(data.payload)
+                        const routines = JSON.parse(jsonString)
+                        setDb(routines)
+                    } catch (e) {
+                        console.error('Decryption failed', e)
+                        setError('Failed to process routine data.')
+                    }
+                } else {
+                    setDb(data) // Fallback if not encrypted (shouldn't happen with current server)
+                }
                 setLoading(false)
             })
             .catch(err => {
@@ -55,7 +74,30 @@ function App() {
         }, 100)
     }
 
+    const handleDownload = async (encryptedPath, filename, type) => {
+        try {
+            const response = await fetch(`/api/download/${type}/${encryptedPath}`, {
+                headers: {
+                    'x-api-key': API_KEY
+                }
+            })
 
+            if (!response.ok) throw new Error('Download failed')
+
+            const blob = await response.blob()
+            const url = window.URL.createObjectURL(blob)
+            const link = document.createElement('a')
+            link.href = url
+            link.download = filename
+            document.body.appendChild(link)
+            link.click()
+            window.URL.revokeObjectURL(url)
+            document.body.removeChild(link)
+        } catch (error) {
+            console.error('Download error:', error)
+            alert('Failed to download file. Please try again.')
+        }
+    }
 
     if (loading) {
         return (
@@ -181,7 +223,7 @@ function App() {
                             </div>
                             <div className="glass" style={{ padding: '0.5rem', borderRadius: 'var(--radius-sm)' }}>
                                 <img
-                                    src={`/.routines/${result.image}`}
+                                    src={`/api/view/image/${result.image}`}
                                     alt="Official Routine"
                                     style={{ width: '100%', height: 'auto', borderRadius: 'var(--radius-md)' }}
                                 />
